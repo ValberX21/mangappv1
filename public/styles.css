@@ -1,0 +1,157 @@
+/* html,
+body {
+  height: 100%;
+  text-align: center;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  text-align: center;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-center {
+  display:flex;
+  justify-content: center;
+} */
+
+.imga {
+    margin: 20px;
+    width: 15%;
+    height: 15%;
+  }
+  
+  .cadaEmp {
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    margin: 15px;
+    border-style: dashed;
+    padding: 10px;
+  }
+  
+  .navv {
+    padding: 15px;
+    background-color: grey;
+    width: 100%;
+    height: 50px;
+  }
+  
+  
+  .listEmp {
+    padding: 20px;
+    width: 50%;
+    border-style: dashed;
+    margin: 20px;
+    
+  }
+  
+  .navigation {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0.5rem 0rem;
+    background-color: #fff;
+    color: black;
+    box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+  }
+
+  .mybtn{
+    height: 60px;
+    width: 100px;
+  }
+
+  .cadForm{
+    border: black;
+    margin: 10%;
+    height: 50%;
+    width:  200px;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    margin: 15px;
+    border-style: dashed;
+    padding: 10px;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .on {
+    border: black;
+    color: red;
+  }
+  .off {
+    color: #ccc;
+  }
+
+  .box1{
+    width: 200px;
+    height: 50%;   
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+    margin: 15px;
+    border-style: dashed;
+    padding: 10px;
+  }
+
+  .box2{
+    height: 100px;
+    width: 100px;  
+    text-align: center;
+    border-style: dashed;
+    padding: 10px;
+  } 
+
+  .mainbox{
+    width: 100%;
+   
+  border: 1px solid red;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  }
+
+  .parent {
+    border: 1px solid black;
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+  .child {
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+  }
