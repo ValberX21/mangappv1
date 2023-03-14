@@ -1,5 +1,6 @@
 Hello everybody, I'm Valber, when go to build application in your machine, don't forget to alter connection string to your local or cloud database
-
+ 
+ 
 Cloud example: databse-2.xxxxxx.us-east-2.rds.amazonaws.com
 Local example: DESKTOP-BLABLABLA\SQLEXPRESS (If you use a local database be careful with back slash)
 
