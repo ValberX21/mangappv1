@@ -37,7 +37,6 @@ export class Newmanga extends Component{
                 alert(result); 
                 window.location.reload(true)             
             },(error)=>{
-                console.log(error)
                 alert(`Ops !, something went wrong  ${error}`);            
             })
         }
