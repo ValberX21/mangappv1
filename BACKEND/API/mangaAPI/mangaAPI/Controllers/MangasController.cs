@@ -25,7 +25,7 @@ namespace mangaAPI.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-            string query = @"SELECT * FROM  MANGAS";
+            string query = @"SELECT * FROM  MANGAS ORDER BY ID ASC";
 
             DataTable table = new DataTable();
             string sqlDataSource = _configuration.GetConnectionString("MangasAppCon");

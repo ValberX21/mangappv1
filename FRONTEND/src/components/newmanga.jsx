@@ -1,9 +1,8 @@
 import React,{Component} from "react";
 import { ListMangas } from "./listmangas";
-import StarRating from "./starranking";
 import { variable } from "../service/API";
-
 export class Newmanga extends Component{
+    
     constructor(props) {
         super(props);
         this.state={
@@ -12,14 +11,13 @@ export class Newmanga extends Component{
             mangaType:""
         }
     }
-
-    sendData(){
-        if(this.state.fmangaName == ""){
-            alert("Favor preencher campo Nome fantasia");
-        }else if(this.state.fmangaAuthor == ""){
-            alert("Favor preencher campo razão social");
-        }else if(this.state.fmangaType == ""){
-            alert("Favor preencher campo CNJP");
+    sendData(){   
+        if(this.state.fmangaName == "" || this.state.fmangaName == undefined){
+            alert("Type manga's name please");
+        }else if(this.state.fmangaAuthor == ""  || this.state.fmangaAuthor == undefined){
+            alert("Type author's name please");
+        }else if(this.state.fmangaType == "" || this.state.fmangaType == undefined){
+            alert("Fill in the field type please");
         }else{
             fetch(variable.API_MANGAS+'mangas',{
                 method:'POST',
@@ -36,34 +34,30 @@ export class Newmanga extends Component{
             })
             .then(res=>res.json())
             .then((result)=>{
-                alert(result);                
+                alert(result); 
+                window.location.reload(true)             
             },(error)=>{
                 console.log(error)
-                alert(`Ops !, alguma coisa deu errado ${error}`);
-                
+                alert(`Ops !, something went wrong  ${error}`);            
             })
         }
     }
-
-    changeMangaName = (e) =>{
-        this.setState({fmangaName:e.target.value});
-    }
-
+     changeMangaName = (e) =>{
+         this.setState({fmangaName:e.target.value});
+     }
     changeMangaAuthor = (e) =>{
         this.setState({fmangaAuthor:e.target.value});
     }
-
     changeMangaType = (e) =>{
         this.setState({fmangaType:e.target.value});
-    }
-    
+    }   
     render(){
         const {
             fmangaName,
             fmangaAuthor,
             fmangaType  
         }=this.state;
-
+        const data = 0;
         return(  
             <div className="parent">
                 <div className="child">
@@ -82,12 +76,10 @@ export class Newmanga extends Component{
                         <label htmlFor="mangaType">Type</label>
                     </div>
 
-                    <label >Rating</label>
-                    <StarRating/>
-                    
-                            <button className="w-10 btn btn-lg btn-success" onClick={()=>this.sendData()}>Register</button>          
+                    <button className="w-10 btn btn-lg btn-success" onClick={()=>this.sendData()}>Register</button>    
+
                 </div>
-{/* SECOND BLOCK */}
+                {/* SECOND BLOCK */}
                 <div className="child">
                   <ListMangas/>
                 </div>

@@ -52,12 +52,17 @@ export class ListMangas extends Component{
                           Manga
                         </th>
 
+                        <th>
+                          Autor
+                        </th>
+
                    </thead>
                    <tbody>
                        {mangas.map(emp=>
                         <tr key={emp.ID}>
                             <td>{emp.ID}</td>
                             <td>{emp.NAME}</td>                           
+                            <td>{emp.AUTHOR}</td>
                         </tr>)}
                    </tbody>
                </table>

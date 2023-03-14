@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 
 
-const StarRating = () => { 
+const StarRating = (props) => { 
 
   const [rating,setRating] = useState(0)
 
@@ -15,7 +15,7 @@ const StarRating = () => {
             type="button"
             key={index}
             className={index <= rating ? "on" : "off"}
-            onClick={() => setRating(index)}
+            onClick={() => setRating(index) }
         >
         <span className="star">&#9733;</span>
         </button>
